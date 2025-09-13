@@ -1924,51 +1924,65 @@ body {
     transform: rotate(-45deg) translate(6px, -6px);
   }
   
+@media (max-width: 768px) {
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
     gap: var(--space-xl);
-   justify-items: center;   
+    justify-items: center;   
   }
-  
+
+  .hero-content > * {
+    justify-self: center; /* keeps each child centered */
+  }
+
+  .hero-title,
+  .hero-subtitle {
+    text-align: center;
+  }
+
   .hero-buttons {
+    justify-content: center;
+    justify-self: center;
     flex-direction: column;
     align-items: center;
   }
-  
+
+  .luxury-orb {
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+  }
+
   .luxury-btn {
     width: 100%;
     max-width: 300px;
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-links {
     grid-template-columns: 1fr;
   }
-  
+
   .form-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .coaches-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .services-grid,
   .events-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .luxury-orb {
-    width: 250px;
-    height: 250px;
   }
 }
 
@@ -1976,26 +1990,26 @@ body {
   .section-container {
     padding: var(--space-xl) var(--space-md);
   }
-  
+
   .luxury-form-container {
     padding: var(--space-xl) var(--space-lg);
   }
-  
+
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .typewriter-text {
     white-space: normal;
     animation: none;
     width: auto;
     border: none;
   }
-  
+
   .luxury-nav {
     padding: 0 var(--space-md);
   }
-  
+
   .luxury-logo .logo-text {
     font-size: 1.2rem;
   }
