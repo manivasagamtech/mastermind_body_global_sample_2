@@ -1,406 +1,2001 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MasterMind Body Global - Transform Your Mind · Body · Life</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Navigation Header -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav__brand">
-                <div class="logo">
-                    <i class="fas fa-tree"></i>
-                    <span>MasterMind Body Global</span>
-                </div>
-            </div>
-            <ul class="nav__menu" id="nav-menu">
-                <li class="nav__item">
-                    <a href="#home" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#about" class="nav__link">About Us</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#services" class="nav__link">Services</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#events" class="nav__link">Events</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#contact" class="nav__link">Contact</a>
-                </li>
-            </ul>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+:root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero__container container">
-            <div class="hero__content">
-                <h1 class="hero__title">Transform Your Mind · Body · Life</h1>
-                <p class="hero__subtitle">Unlock your potential with expert life transformation coaches Dr. Deepti Verma and Ms. Shalini Chopra</p>
-                <div class="hero__buttons">
-                    <button class="btn btn--primary hero__btn" id="book-consultation-btn">
-                        <i class="fas fa-calendar-check"></i>
-                        Book Consultation
-                    </button>
-                    <button class="btn btn--secondary hero__btn" id="join-webinar-btn">
-                        <i class="fas fa-play-circle"></i>
-                        Join Webinar
-                    </button>
-                </div>
-            </div>
-            <div class="hero__image">
-                <div class="hero__placeholder">
-                    <i class="fas fa-leaf"></i>
-                    <p>Wellness & Harmony</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
 
-    <!-- Consultation Form Section -->
-    <section id="consultation-form" class="consultation">
-        <div class="container">
-            <div class="consultation__content">
-                <h2 class="section__title">Start Your Transformation Journey</h2>
-                <p class="section__subtitle">Fill out the form below to book your personalized consultation</p>
-                
-                <form class="consultation__form" id="consultationForm">
-                    <div class="form__grid">
-                        <div class="form__group">
-                            <label class="form-label" for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" class="form-control" required placeholder="Enter your full name">
-                        </div>
-                        <div class="form__group">
-                            <label class="form-label" for="mobile">Mobile Number *</label>
-                            <input type="tel" id="mobile" name="mobile" class="form-control" required placeholder="Enter your mobile number">
-                        </div>
-                        <div class="form__group">
-                            <label class="form-label" for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form-control" required placeholder="Enter your email address">
-                        </div>
-                        <div class="form__group">
-                            <label class="form-label" for="consultation-type">Type of Consultation *</label>
-                            <select id="consultation-type" name="consultationType" class="form-control" required>
-                                <option value="">Select a consultation type</option>
-                                <option value="Life Transformation Coaching">Life Transformation Coaching</option>
-                                <option value="Money & Financial Guidance">Money & Financial Guidance</option>
-                                <option value="Health & Nutrition Counseling">Health & Nutrition Counseling</option>
-                                <option value="Career Development">Career Development</option>
-                                <option value="Relationship Coaching">Relationship Coaching</option>
-                                <option value="Mind Coaching">Mind Coaching</option>
-                                <option value="Corporate Leadership Training">Corporate Leadership Training</option>
-                                <option value="English Fluency Training">English Fluency Training</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form__group">
-                        <label class="form-label" for="message">Additional Message (Optional)</label>
-                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us more about your goals or specific areas you'd like to focus on..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full-width">
-                        <i class="fas fa-paper-plane"></i>
-                        Submit Consultation Request
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08); /* Light blue */
+  --color-bg-2: rgba(245, 158, 11, 0.08); /* Light yellow */
+  --color-bg-3: rgba(34, 197, 94, 0.08); /* Light green */
+  --color-bg-4: rgba(239, 68, 68, 0.08); /* Light red */
+  --color-bg-5: rgba(147, 51, 234, 0.08); /* Light purple */
+  --color-bg-6: rgba(249, 115, 22, 0.08); /* Light orange */
+  --color-bg-7: rgba(236, 72, 153, 0.08); /* Light pink */
+  --color-bg-8: rgba(6, 182, 212, 0.08); /* Light cyan */
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Meet Your Transformation Coaches</h2>
-                <p class="section__subtitle">Expert guidance from certified professionals dedicated to your success</p>
-            </div>
-            
-            <div class="about__content">
-                <div class="about__mission">
-                    <h3>Our Mission</h3>
-                    <p>Helping clients overcome blockages in money, health, career, relationships and unlock their full potential for a transformed life.</p>
-                </div>
-                
-                <div class="coaches">
-                    <div class="coach__card">
-                        <div class="coach__image">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="coach__info">
-                            <h3 class="coach__name">Dr. Deepti Verma</h3>
-                            <p class="coach__title">Director, Digital Creator</p>
-                            <p class="coach__credentials">Certified Life Coach, Nutrition Expert, Mind Coaching Specialist</p>
-                            <div class="coach__social">
-                                <a href="https://instagram.com/drdeeptivermaofficial" target="_blank" class="social__link">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="coach__card">
-                        <div class="coach__image">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <div class="coach__info">
-                            <h3 class="coach__name">Ms. Shalini Chopra</h3>
-                            <p class="coach__title">Co-Founder & Senior Coach</p>
-                            <p class="coach__credentials">Certified Life Coach, Corporate Communication Expert</p>
-                            <div class="coach__social">
-                                <a href="https://instagram.com/shalini1609.chopra" target="_blank" class="social__link">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Your New Life Starts Here</h2>
-                <p class="section__subtitle">Comprehensive coaching services to transform every aspect of your life</p>
-            </div>
-            
-            <div class="services__grid">
-                <div class="service__card">
-                    <div class="service__icon">🌟</div>
-                    <h3 class="service__title">Life Transformation Coaching</h3>
-                    <p class="service__description">Comprehensive coaching to transform all aspects of your life</p>
-                    <button class="btn btn--outline service__btn">Learn More</button>
-                </div>
-                
-                <div class="service__card">
-                    <div class="service__icon">💰</div>
-                    <h3 class="service__title">Money, Health, Career Consultancy</h3>
-                    <p class="service__description">Specialized guidance for financial, health, and career growth</p>
-                    <button class="btn btn--outline service__btn">Learn More</button>
-                </div>
-                
-                <div class="service__card">
-                    <div class="service__icon">🥗</div>
-                    <h3 class="service__title">Diet Counselling & Nutrition</h3>
-                    <p class="service__description">Expert nutrition guidance for optimal health and wellness</p>
-                    <button class="btn btn--outline service__btn">Learn More</button>
-                </div>
-                
-                <div class="service__card">
-                    <div class="service__icon">🧠</div>
-                    <h3 class="service__title">Mind Coaching & Leadership</h3>
-                    <p class="service__description">Corporate leadership and mental strength development</p>
-                    <button class="btn btn--outline service__btn">Learn More</button>
-                </div>
-                
-                <div class="service__card">
-                    <div class="service__icon">🗣️</div>
-                    <h3 class="service__title">English Fluency & Communication</h3>
-                    <p class="service__description">Enhance your communication skills and English proficiency</p>
-                    <button class="btn btn--outline service__btn">Learn More</button>
-                </div>
-            </div>
-        </div>
-    </section>
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 
-    <!-- Events Section -->
-    <section id="events" class="events">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Events & Content</h2>
-                <p class="section__subtitle">Stay connected with our latest webinars, workshops, and transformational content</p>
-            </div>
-            
-            <div class="events__content">
-                <div class="events__grid">
-                    <div class="event__card">
-                        <div class="event__icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3 class="event__title">Monthly Transformation Webinars</h3>
-                        <p class="event__description">Join our monthly live webinars covering various aspects of personal development</p>
-                        <p class="event__date">Next Session: Every 2nd Saturday</p>
-                        <button class="btn btn--primary event__btn register-btn">Register Now</button>
-                    </div>
-                    
-                    <div class="event__card">
-                        <div class="event__icon">
-                            <i class="fab fa-youtube"></i>
-                        </div>
-                        <h3 class="event__title">YouTube Channel</h3>
-                        <p class="event__description">Access free transformational content and coaching tips</p>
-                        <p class="event__date">New videos every week</p>
-                        <a href="https://youtube.com/@MASTERMINDBODYGLOBAL" target="_blank" class="btn btn--primary event__btn">Visit Channel</a>
-                    </div>
-                    
-                    <div class="event__card">
-                        <div class="event__icon">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <h3 class="event__title">Instagram Live Sessions</h3>
-                        <p class="event__description">Follow us for daily inspiration and live Q&A sessions</p>
-                        <p class="event__date">Weekly live sessions</p>
-                        <a href="https://instagram.com/mastermind_body_global" target="_blank" class="btn btn--primary event__btn">Follow Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  /* RGB versions for opacity control */
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Get In Touch</h2>
-                <p class="section__subtitle">Ready to start your transformation? Contact us today!</p>
-            </div>
-            
-            <div class="contact__content">
-                <div class="contact__info">
-                    <div class="contact__item">
-                        <div class="contact__icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact__details">
-                            <h3>Phone Numbers</h3>
-                            <p><a href="tel:+919811218842">+91 9811218842</a></p>
-                            <p><a href="tel:+919818570805">+91 9818570805</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact__item">
-                        <div class="contact__icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact__details">
-                            <h3>WhatsApp</h3>
-                            <a href="https://wa.me/919811218842" target="_blank" class="btn btn--whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                                Chat on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact__item">
-                        <div class="contact__icon">
-                            <i class="fas fa-share-alt"></i>
-                        </div>
-                        <div class="contact__details">
-                            <h3>Follow Us</h3>
-                            <div class="social__links">
-                                <a href="https://instagram.com/mastermind_body_global" target="_blank" class="social__link" title="MasterMind Body Global Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://instagram.com/drdeeptivermaofficial" target="_blank" class="social__link" title="Dr. Deepti Verma Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://instagram.com/shalini1609.chopra" target="_blank" class="social__link" title="Shalini Chopra Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://youtube.com/@MASTERMINDBODYGLOBAL" target="_blank" class="social__link" title="YouTube Channel">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact__map">
-                    <div class="map__placeholder">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Location Map</p>
-                        <small>Connect with us virtually from anywhere</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <div class="logo">
-                        <i class="fas fa-tree"></i>
-                        <span>MasterMind Body Global</span>
-                    </div>
-                    <p class="footer__tagline">Transform Your Mind · Body · Life</p>
-                </div>
-                
-                <div class="footer__links">
-                    <div class="footer__section">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer__section">
-                        <h4>Services</h4>
-                        <ul>
-                            <li>Life Transformation</li>
-                            <li>Nutrition Counseling</li>
-                            <li>Mind Coaching</li>
-                            <li>Corporate Training</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer__section">
-                        <h4>Connect With Us</h4>
-                        <div class="footer__social">
-                            <a href="https://instagram.com/mastermind_body_global" target="_blank" class="social__link">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://youtube.com/@MASTERMINDBODYGLOBAL" target="_blank" class="social__link">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="https://wa.me/919811218842" target="_blank" class="social__link">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer__bottom">
-                <p>&copy; 2024 MasterMind Body Global. All rights reserved.</p>
-                <p>Empowering lives through transformation coaching.</p>
-            </div>
-        </div>
-    </footer>
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
 
-    <!-- Success Modal -->
-    <div id="success-modal" class="modal hidden">
-        <div class="modal__content">
-            <div class="modal__header">
-                <h3>Thank You!</h3>
-                <button class="modal__close" id="modal-close-btn">&times;</button>
-            </div>
-            <div class="modal__body">
-                <i class="fas fa-check-circle success-icon"></i>
-                <p>Your consultation request has been submitted successfully. We'll get back to you within 24 hours!</p>
-            </div>
-            <div class="modal__footer">
-                <button class="btn btn--primary" id="modal-close-footer-btn">Close</button>
-            </div>
-        </div>
-    </div>
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
 
-    <script src="app.js"></script>
-</body>
-</html>
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* RGB versions for opacity control (Dark Mode) */
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    /* Background color tokens (Dark Mode) */
+    --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+    --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+    --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+    --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+    --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+    --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+    --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+    --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+
+    /* Semantic Color Tokens (Dark Mode) */
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+    /* Common style patterns - updated for dark mode */
+    --focus-ring: 0 0 0 3px var(--color-focus-ring);
+    --focus-outline: 2px solid var(--color-primary);
+    --status-bg-opacity: 0.15;
+    --status-border-opacity: 0.25;
+    --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+    /* RGB versions for dark mode */
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+/* Data attribute for manual theme switching */
+[data-color-scheme="dark"] {
+  /* RGB versions for opacity control (dark mode) */
+  --color-gray-400-rgb: 119, 124, 124;
+  --color-teal-300-rgb: 50, 184, 198;
+  --color-gray-300-rgb: 167, 169, 169;
+  --color-gray-200-rgb: 245, 245, 245;
+
+  /* Colorful background palette - Dark Mode */
+  --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+  --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+  --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+  --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+  --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+  --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+  --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+  --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+
+  /* Semantic Color Tokens (Dark Mode) */
+  --color-background: var(--color-charcoal-700);
+  --color-surface: var(--color-charcoal-800);
+  --color-text: var(--color-gray-200);
+  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+  --color-primary: var(--color-teal-300);
+  --color-primary-hover: var(--color-teal-400);
+  --color-primary-active: var(--color-teal-800);
+  --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+  --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-error: var(--color-red-400);
+  --color-success: var(--color-teal-300);
+  --color-warning: var(--color-orange-400);
+  --color-info: var(--color-gray-300);
+  --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+  --color-btn-primary-text: var(--color-slate-900);
+  --color-card-border: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+  --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+  /* Common style patterns - updated for dark mode */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  /* RGB versions for dark mode */
+  --color-success-rgb: var(--color-teal-300-rgb);
+  --color-error-rgb: var(--color-red-400-rgb);
+  --color-warning-rgb: var(--color-orange-400-rgb);
+  --color-info-rgb: var(--color-gray-300-rgb);
+}
+
+[data-color-scheme="light"] {
+  /* RGB versions for opacity control (light mode) */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+
+  /* RGB versions for light mode */
+  --color-success-rgb: var(--color-teal-500-rgb);
+  --color-error-rgb: var(--color-red-500-rgb);
+  --color-warning-rgb: var(--color-orange-500-rgb);
+  --color-info-rgb: var(--color-slate-500-rgb);
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+h2 {
+  font-size: var(--font-size-3xl);
+}
+h3 {
+  font-size: var(--font-size-2xl);
+}
+h4 {
+  font-size: var(--font-size-xl);
+}
+h5 {
+  font-size: var(--font-size-lg);
+}
+h6 {
+  font-size: var(--font-size-md);
+}
+
+p {
+  margin: 0 0 var(--space-16) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+code,
+pre {
+  font-family: var(--font-family-mono);
+  font-size: calc(var(--font-size-base) * 0.95);
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-sm);
+}
+
+code {
+  padding: var(--space-1) var(--space-4);
+}
+
+pre {
+  padding: var(--space-16);
+  margin: var(--space-16) 0;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--primary:active {
+  background: var(--color-primary-active);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn--secondary:active {
+  background: var(--color-secondary-active);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  background: var(--color-secondary);
+}
+
+.btn--sm {
+  padding: var(--space-4) var(--space-12);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+}
+
+.btn--lg {
+  padding: var(--space-10) var(--space-20);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-md);
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form elements */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+textarea.form-control {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+}
+
+select.form-control {
+  padding: var(--space-8) var(--space-12);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: var(--select-caret-light);
+  background-repeat: no-repeat;
+  background-position: right var(--space-12) center;
+  background-size: 16px;
+  padding-right: var(--space-32);
+}
+
+/* Add a dark mode specific caret */
+@media (prefers-color-scheme: dark) {
+  select.form-control {
+    background-image: var(--select-caret-dark);
+  }
+}
+
+/* Also handle data-color-scheme */
+[data-color-scheme="dark"] select.form-control {
+  background-image: var(--select-caret-dark);
+}
+
+[data-color-scheme="light"] select.form-control {
+  background-image: var(--select-caret-light);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  outline: var(--focus-outline);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.form-group {
+  margin-bottom: var(--space-16);
+}
+
+/* Card component */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card__body {
+  padding: var(--space-16);
+}
+
+.card__header,
+.card__footer {
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--color-card-border-inner);
+}
+
+/* Status indicators - simplified with CSS variables */
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.status--success {
+  background-color: rgba(
+    var(--color-success-rgb, 33, 128, 141),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-success);
+  border: 1px solid
+    rgba(var(--color-success-rgb, 33, 128, 141), var(--status-border-opacity));
+}
+
+.status--error {
+  background-color: rgba(
+    var(--color-error-rgb, 192, 21, 47),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-error);
+  border: 1px solid
+    rgba(var(--color-error-rgb, 192, 21, 47), var(--status-border-opacity));
+}
+
+.status--warning {
+  background-color: rgba(
+    var(--color-warning-rgb, 168, 75, 47),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-warning);
+  border: 1px solid
+    rgba(var(--color-warning-rgb, 168, 75, 47), var(--status-border-opacity));
+}
+
+.status--info {
+  background-color: rgba(
+    var(--color-info-rgb, 98, 108, 113),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-info);
+  border: 1px solid
+    rgba(var(--color-info-rgb, 98, 108, 113), var(--status-border-opacity));
+}
+
+/* Container layout */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--space-16);
+  padding-left: var(--space-16);
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-4 {
+  gap: var(--space-4);
+}
+.gap-8 {
+  gap: var(--space-8);
+}
+.gap-16 {
+  gap: var(--space-16);
+}
+
+.m-0 {
+  margin: 0;
+}
+.mt-8 {
+  margin-top: var(--space-8);
+}
+.mb-8 {
+  margin-bottom: var(--space-8);
+}
+.mx-8 {
+  margin-left: var(--space-8);
+  margin-right: var(--space-8);
+}
+.my-8 {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.p-0 {
+  padding: 0;
+}
+.py-8 {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+.px-8 {
+  padding-left: var(--space-8);
+  padding-right: var(--space-8);
+}
+.py-16 {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+.px-16 {
+  padding-left: var(--space-16);
+  padding-right: var(--space-16);
+}
+
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Dark mode specifics */
+[data-color-scheme="dark"] .btn--outline {
+  border: 1px solid var(--color-border-secondary);
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+    format('woff2');
+}
+
+/* END PERPLEXITY DESIGN SYSTEM */
+/* Luxury Black Theme with Gold Accents */
+
+/* Custom Color Palette */
+:root {
+  /* Black Theme Colors */
+  --color-black-primary: #000000;
+  --color-black-secondary: #111111;
+  --color-black-tertiary: #1a1a1a;
+  --color-black-soft: #222222;
+  
+  /* White & Gray Colors */
+  --color-white-primary: #FFFFFF;
+  --color-white-soft: #F5F5F5;
+  --color-gray-light: #E5E5E5;
+  --color-gray-medium: #CCCCCC;
+  --color-gray-dark: #888888;
+  
+  /* Gold Accent Colors */
+  --color-gold-primary: #FFD700;
+  --color-gold-bright: #F4C430;
+  --color-gold-dark: #DAA520;
+  --color-gold-deep: #B8860B;
+  
+  /* Override design system for luxury theme */
+  --color-background: var(--color-black-primary);
+  --color-surface: var(--color-black-secondary);
+  --color-text: var(--color-white-primary);
+  --color-text-secondary: var(--color-gray-light);
+  --color-primary: var(--color-gold-primary);
+  --color-primary-hover: var(--color-gold-bright);
+  --color-accent: var(--color-gold-primary);
+  
+  /* Luxury Fonts */
+  --font-luxury: 'Playfair Display', serif;
+  --font-modern: 'Inter', sans-serif;
+  
+  /* Luxury Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  
+  /* Luxury Shadows */
+  --shadow-gold: 0 0 20px rgba(255, 215, 0, 0.3);
+  --shadow-gold-intense: 0 0 40px rgba(255, 215, 0, 0.5);
+  --shadow-black: 0 10px 30px rgba(0, 0, 0, 0.5);
+  
+  /* Animation Timing */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-luxury: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-modern);
+  background: var(--color-black-primary);
+  color: var(--color-white-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Floating Particles Background */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--color-gold-primary);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 8s infinite linear;
+}
+
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 6s; }
+.particle:nth-child(2) { left: 20%; animation-delay: 1s; animation-duration: 8s; }
+.particle:nth-child(3) { left: 30%; animation-delay: 2s; animation-duration: 7s; }
+.particle:nth-child(4) { left: 40%; animation-delay: 0.5s; animation-duration: 9s; }
+.particle:nth-child(5) { left: 50%; animation-delay: 1.5s; animation-duration: 6s; }
+.particle:nth-child(6) { left: 60%; animation-delay: 3s; animation-duration: 8s; }
+.particle:nth-child(7) { left: 70%; animation-delay: 2.5s; animation-duration: 7s; }
+.particle:nth-child(8) { left: 80%; animation-delay: 4s; animation-duration: 9s; }
+.particle:nth-child(9) { left: 90%; animation-delay: 3.5s; animation-duration: 6s; }
+.particle:nth-child(10) { left: 95%; animation-delay: 5s; animation-duration: 8s; }
+
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-100px) scale(1); opacity: 0; }
+}
+
+/* Luxury Header */
+.luxury-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.luxury-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.luxury-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-luxury);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gold-primary);
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: var(--color-gold-primary);
+  text-shadow: var(--shadow-gold);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--space-xl);
+}
+
+.nav-link {
+  color: var(--color-white-primary);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-gold-primary), var(--color-gold-bright));
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover {
+  color: var(--color-gold-primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--color-gold-primary);
+  transition: var(--transition-smooth);
+}
+
+/* Hero Section */
+.luxury-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, var(--color-black-primary) 0%, var(--color-black-secondary) 50%, var(--color-black-tertiary) 100%);
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  font-family: var(--font-luxury);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
+  background: linear-gradient(135deg, var(--color-white-primary) 0%, var(--color-gold-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 3s steps(30) 1s forwards, blink-cursor 0.5s step-end infinite;
+  border-right: 3px solid var(--color-gold-primary);
+  width: 0;
+}
+
+@keyframes typewriter {
+  to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+  50% { border-color: transparent; }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-gray-light);
+  margin-bottom: var(--space-xl);
+  opacity: 0;
+  animation: fadeInUp 1s ease 2s forwards;
+}
+
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInUp 1s ease 2.5s forwards;
+}
+
+.luxury-orb {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.orb-inner {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-gold-primary);
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 20s linear infinite;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orb-content {
+  text-align: center;
+  color: var(--color-gold-primary);
+}
+
+.orb-content i {
+  font-size: 3rem;
+  margin-bottom: var(--space-sm);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.orb-content p {
+  font-family: var(--font-luxury);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* Luxury Buttons */
+.luxury-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: 50px;
+  font-family: var(--font-modern);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-luxury);
+  text-decoration: none;
+  z-index: 1;
+}
+
+.luxury-btn-primary {
+  background: linear-gradient(135deg, var(--color-gold-primary) 0%, var(--color-gold-bright) 100%);
+  color: var(--color-black-primary);
+  box-shadow: var(--shadow-gold);
+}
+
+.luxury-btn-secondary {
+  background: transparent;
+  color: var(--color-gold-primary);
+  border: 2px solid var(--color-gold-primary);
+}
+
+.luxury-btn-submit {
+  width: 100%;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-gold-primary) 0%, var(--color-gold-bright) 100%);
+  color: var(--color-black-primary);
+  font-size: 1.1rem;
+  padding: var(--space-lg) var(--space-xl);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: var(--transition-smooth);
+  z-index: -1;
+}
+
+.luxury-btn:hover .btn-glow {
+  left: 100%;
+}
+
+.luxury-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold-intense);
+}
+
+.luxury-btn-secondary:hover {
+  background: var(--color-gold-primary);
+  color: var(--color-black-primary);
+}
+
+/* Section Containers */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.section-title {
+  font-family: var(--font-luxury);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  background: linear-gradient(135deg, var(--color-white-primary) 0%, var(--color-gold-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-gold-primary), var(--color-gold-bright));
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-gray-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Luxury Consultation Form */
+.luxury-consultation {
+  background: var(--color-black-secondary);
+  position: relative;
+}
+
+.luxury-consultation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.luxury-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-black-tertiary);
+  padding: var(--space-3xl);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: var(--shadow-black);
+  position: relative;
+  z-index: 10;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.form-group {
+  position: relative;
+}
+
+.luxury-label {
+  display: block;
+  font-weight: 600;
+  color: var(--color-gold-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.luxury-input,
+.luxury-textarea,
+.luxury-select {
+  width: 100%;
+  padding: var(--space-md);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+  color: var(--color-white-primary);
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+  border-radius: 0;
+}
+
+.luxury-input:focus,
+.luxury-textarea:focus,
+.luxury-select:focus {
+  outline: none;
+  border-bottom-color: var(--color-gold-primary);
+}
+
+.luxury-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.luxury-select {
+  cursor: pointer;
+}
+
+.luxury-select option {
+  background: var(--color-black-primary);
+  color: var(--color-white-primary);
+}
+
+.input-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-gold-primary), var(--color-gold-bright));
+  transition: var(--transition-smooth);
+}
+
+.luxury-input:focus + .input-line,
+.luxury-textarea:focus + .input-line,
+.luxury-select:focus + .input-line {
+  width: 100%;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* About Section */
+.luxury-about {
+  background: var(--color-black-primary);
+}
+
+.mission-statement {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  padding: var(--space-xl);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 15px;
+  background: var(--color-black-secondary);
+}
+
+.mission-title {
+  font-family: var(--font-luxury);
+  font-size: 2rem;
+  color: var(--color-gold-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.mission-text {
+  font-size: 1.1rem;
+  color: var(--color-gray-light);
+  line-height: 1.8;
+}
+
+.coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-xl);
+}
+
+.luxury-coach-card {
+  background: var(--color-black-secondary);
+  padding: var(--space-xl);
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: var(--transition-luxury);
+  overflow: hidden;
+}
+
+.luxury-coach-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: var(--transition-luxury);
+  pointer-events: none;
+}
+
+.luxury-coach-card:hover::before {
+  opacity: 1;
+}
+
+.luxury-coach-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-gold);
+  border-color: var(--color-gold-primary);
+}
+
+.coach-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--space-lg);
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold-primary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--color-gold-primary);
+}
+
+.image-placeholder i {
+  font-size: 3rem;
+  color: var(--color-black-primary);
+}
+
+.coach-glow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: var(--color-gold-primary);
+  opacity: 0;
+  z-index: -1;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { opacity: 0; transform: scale(1); }
+  to { opacity: 0.3; transform: scale(1.1); }
+}
+
+.coach-name {
+  font-family: var(--font-luxury);
+  font-size: 1.5rem;
+  color: var(--color-gold-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.coach-title {
+  font-size: 1rem;
+  color: var(--color-gray-light);
+  margin-bottom: var(--space-lg);
+  font-weight: 600;
+}
+
+.credentials {
+  margin-bottom: var(--space-lg);
+}
+
+.credential {
+  display: block;
+  color: var(--color-white-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+}
+
+.luxury-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--color-gold-primary), var(--color-gold-bright));
+  color: var(--color-black-primary);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  font-size: 1.2rem;
+}
+
+.luxury-social-link:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Services Section */
+.luxury-services {
+  background: var(--color-black-secondary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+.luxury-service-card {
+  background: var(--color-black-tertiary);
+  padding: var(--space-xl);
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: var(--transition-luxury);
+  overflow: hidden;
+}
+
+.luxury-service-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-gold-primary);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--color-gold-primary), var(--color-gold-bright));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-lg);
+  font-size: 2rem;
+  color: var(--color-black-primary);
+}
+
+.service-title {
+  font-family: var(--font-luxury);
+  font-size: 1.3rem;
+  color: var(--color-gold-primary);
+  margin-bottom: var(--space-md);
+}
+
+.service-description {
+  color: var(--color-gray-light);
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+
+.service-btn {
+  background: transparent;
+  color: var(--color-gold-primary);
+  border: 1px solid var(--color-gold-primary);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-weight: 600;
+}
+
+.service-btn:hover {
+  background: var(--color-gold-primary);
+  color: var(--color-black-primary);
+}
+
+.service-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: var(--transition-luxury);
+  pointer-events: none;
+}
+
+.luxury-service-card:hover .service-glow {
+  opacity: 1;
+}
+
+/* Events Section */
+.luxury-events {
+  background: var(--color-black-primary);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-xl);
+}
+
+.luxury-event-card {
+  background: var(--color-black-secondary);
+  padding: var(--space-xl);
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: var(--transition-luxury);
+}
+
+.luxury-event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-gold);
+  border-color: var(--color-gold-primary);
+}
+
+.event-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--color-gold-primary), var(--color-gold-bright));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-lg);
+  font-size: 2rem;
+  color: var(--color-black-primary);
+}
+
+.event-title {
+  font-family: var(--font-luxury);
+  font-size: 1.3rem;
+  color: var(--color-gold-primary);
+  margin-bottom: var(--space-md);
+}
+
+.event-description {
+  color: var(--color-gray-light);
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+.event-date {
+  font-weight: 600;
+  color: var(--color-white-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.luxury-btn-event {
+  background: linear-gradient(135deg, var(--color-gold-primary), var(--color-gold-bright));
+  color: var(--color-black-primary);
+  border: none;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  transition: var(--transition-smooth);
+}
+
+.luxury-btn-event:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Contact Section */
+.luxury-contact {
+  background: var(--color-black-secondary);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-gold-primary), var(--color-gold-bright));
+  color: var(--color-black-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contact-details h3 {
+  font-family: var(--font-luxury);
+  color: var(--color-gold-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-link {
+  color: var(--color-white-primary);
+  text-decoration: none;
+  display: block;
+  margin-bottom: var(--space-xs);
+  transition: var(--transition-smooth);
+}
+
+.contact-link:hover {
+  color: var(--color-gold-primary);
+}
+
+.luxury-btn-whatsapp {
+  background: #25D366;
+  color: white;
+  margin-top: var(--space-sm);
+}
+
+.luxury-social-grid {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.luxury-contact-card {
+  background: var(--color-black-tertiary);
+  padding: var(--space-xl);
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.contact-card-icon {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--color-gold-primary), var(--color-gold-bright));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-lg);
+  font-size: 2.5rem;
+  color: var(--color-black-primary);
+}
+
+.contact-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--space-lg);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-luxury);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-gold-primary);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--color-gray-light);
+}
+
+/* Footer */
+.luxury-footer {
+  background: var(--color-black-primary);
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  padding: var(--space-3xl) 0 var(--space-lg);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-3xl);
+}
+
+.footer-tagline {
+  font-family: var(--font-luxury);
+  font-size: 1.2rem;
+  color: var(--color-gold-primary);
+  margin: var(--space-md) 0;
+}
+
+.footer-description {
+  color: var(--color-gray-light);
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.footer-section h4 {
+  color: var(--color-gold-primary);
+  margin-bottom: var(--space-md);
+  font-family: var(--font-luxury);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-section ul li a {
+  color: var(--color-gray-light);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.footer-section ul li a:hover {
+  color: var(--color-gold-primary);
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-lg) 0;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  text-align: center;
+  color: var(--color-gray-light);
+  margin-top: var(--space-xl);
+}
+
+/* Modal */
+.luxury-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: var(--transition-smooth);
+}
+
+.luxury-modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  background: var(--color-black-secondary);
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  z-index: 10;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  box-shadow: var(--shadow-gold);
+  transform: scale(1);
+  transition: var(--transition-luxury);
+}
+
+.luxury-modal.hidden .modal-content {
+  transform: scale(0.8);
+}
+
+.modal-header {
+  padding: var(--space-lg);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-family: var(--font-luxury);
+  color: var(--color-gold-primary);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--color-gold-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.modal-close:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.modal-body {
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: var(--color-gold-primary);
+  margin-bottom: var(--space-lg);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.modal-body p {
+  color: var(--color-gray-light);
+  line-height: 1.6;
+}
+
+.modal-footer {
+  padding: var(--space-lg);
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: var(--space-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-smooth);
+  }
+  
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .luxury-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .coaches-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-grid,
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .luxury-orb {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container {
+    padding: var(--space-xl) var(--space-md);
+  }
+  
+  .luxury-form-container {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .typewriter-text {
+    white-space: normal;
+    animation: none;
+    width: auto;
+    border: none;
+  }
+  
+  .luxury-nav {
+    padding: 0 var(--space-md);
+  }
+  
+  .luxury-logo .logo-text {
+    font-size: 1.2rem;
+  }
+}
