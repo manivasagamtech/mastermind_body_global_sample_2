@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterMind Body Global - Transform Your Mind · Body · Life</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <div class="logo">
+                    <i class="fas fa-tree"></i>
+                    <span>MasterMind Body Global</span>
+                </div>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About Us</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#services" class="nav__link">Services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#events" class="nav__link">Events</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero__container container">
+            <div class="hero__content">
+                <h1 class="hero__title">Transform Your Mind · Body · Life</h1>
+                <p class="hero__subtitle">Unlock your potential with expert life transformation coaches Dr. Deepti Verma and Ms. Shalini Chopra</p>
+                <div class="hero__buttons">
+                    <button class="btn btn--primary hero__btn" id="book-consultation-btn">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Consultation
+                    </button>
+                    <button class="btn btn--secondary hero__btn" id="join-webinar-btn">
+                        <i class="fas fa-play-circle"></i>
+                        Join Webinar
+                    </button>
+                </div>
+            </div>
+            <div class="hero__image">
+                <div class="hero__placeholder">
+                    <i class="fas fa-leaf"></i>
+                    <p>Wellness & Harmony</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Form Section -->
+    <section id="consultation-form" class="consultation">
+        <div class="container">
+            <div class="consultation__content">
+                <h2 class="section__title">Start Your Transformation Journey</h2>
+                <p class="section__subtitle">Fill out the form below to book your personalized consultation</p>
+                
+                <form class="consultation__form" id="consultationForm">
+                    <div class="form__grid">
+                        <div class="form__group">
+                            <label class="form-label" for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form__group">
+                            <label class="form-label" for="mobile">Mobile Number *</label>
+                            <input type="tel" id="mobile" name="mobile" class="form-control" required placeholder="Enter your mobile number">
+                        </div>
+                        <div class="form__group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required placeholder="Enter your email address">
+                        </div>
+                        <div class="form__group">
+                            <label class="form-label" for="consultation-type">Type of Consultation *</label>
+                            <select id="consultation-type" name="consultationType" class="form-control" required>
+                                <option value="">Select a consultation type</option>
+                                <option value="Life Transformation Coaching">Life Transformation Coaching</option>
+                                <option value="Money & Financial Guidance">Money & Financial Guidance</option>
+                                <option value="Health & Nutrition Counseling">Health & Nutrition Counseling</option>
+                                <option value="Career Development">Career Development</option>
+                                <option value="Relationship Coaching">Relationship Coaching</option>
+                                <option value="Mind Coaching">Mind Coaching</option>
+                                <option value="Corporate Leadership Training">Corporate Leadership Training</option>
+                                <option value="English Fluency Training">English Fluency Training</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label class="form-label" for="message">Additional Message (Optional)</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us more about your goals or specific areas you'd like to focus on..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Consultation Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Meet Your Transformation Coaches</h2>
+                <p class="section__subtitle">Expert guidance from certified professionals dedicated to your success</p>
+            </div>
+            
+            <div class="about__content">
+                <div class="about__mission">
+                    <h3>Our Mission</h3>
+                    <p>Helping clients overcome blockages in money, health, career, relationships and unlock their full potential for a transformed life.</p>
+                </div>
+                
+                <div class="coaches">
+                    <div class="coach__card">
+                        <div class="coach__image">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="coach__info">
+                            <h3 class="coach__name">Dr. Deepti Verma</h3>
+                            <p class="coach__title">Director, Digital Creator</p>
+                            <p class="coach__credentials">Certified Life Coach, Nutrition Expert, Mind Coaching Specialist</p>
+                            <div class="coach__social">
+                                <a href="https://instagram.com/drdeeptivermaofficial" target="_blank" class="social__link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="coach__card">
+                        <div class="coach__image">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="coach__info">
+                            <h3 class="coach__name">Ms. Shalini Chopra</h3>
+                            <p class="coach__title">Co-Founder & Senior Coach</p>
+                            <p class="coach__credentials">Certified Life Coach, Corporate Communication Expert</p>
+                            <div class="coach__social">
+                                <a href="https://instagram.com/shalini1609.chopra" target="_blank" class="social__link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Your New Life Starts Here</h2>
+                <p class="section__subtitle">Comprehensive coaching services to transform every aspect of your life</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service__card">
+                    <div class="service__icon">🌟</div>
+                    <h3 class="service__title">Life Transformation Coaching</h3>
+                    <p class="service__description">Comprehensive coaching to transform all aspects of your life</p>
+                    <button class="btn btn--outline service__btn">Learn More</button>
+                </div>
+                
+                <div class="service__card">
+                    <div class="service__icon">💰</div>
+                    <h3 class="service__title">Money, Health, Career Consultancy</h3>
+                    <p class="service__description">Specialized guidance for financial, health, and career growth</p>
+                    <button class="btn btn--outline service__btn">Learn More</button>
+                </div>
+                
+                <div class="service__card">
+                    <div class="service__icon">🥗</div>
+                    <h3 class="service__title">Diet Counselling & Nutrition</h3>
+                    <p class="service__description">Expert nutrition guidance for optimal health and wellness</p>
+                    <button class="btn btn--outline service__btn">Learn More</button>
+                </div>
+                
+                <div class="service__card">
+                    <div class="service__icon">🧠</div>
+                    <h3 class="service__title">Mind Coaching & Leadership</h3>
+                    <p class="service__description">Corporate leadership and mental strength development</p>
+                    <button class="btn btn--outline service__btn">Learn More</button>
+                </div>
+                
+                <div class="service__card">
+                    <div class="service__icon">🗣️</div>
+                    <h3 class="service__title">English Fluency & Communication</h3>
+                    <p class="service__description">Enhance your communication skills and English proficiency</p>
+                    <button class="btn btn--outline service__btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Events & Content</h2>
+                <p class="section__subtitle">Stay connected with our latest webinars, workshops, and transformational content</p>
+            </div>
+            
+            <div class="events__content">
+                <div class="events__grid">
+                    <div class="event__card">
+                        <div class="event__icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="event__title">Monthly Transformation Webinars</h3>
+                        <p class="event__description">Join our monthly live webinars covering various aspects of personal development</p>
+                        <p class="event__date">Next Session: Every 2nd Saturday</p>
+                        <button class="btn btn--primary event__btn register-btn">Register Now</button>
+                    </div>
+                    
+                    <div class="event__card">
+                        <div class="event__icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h3 class="event__title">YouTube Channel</h3>
+                        <p class="event__description">Access free transformational content and coaching tips</p>
+                        <p class="event__date">New videos every week</p>
+                        <a href="https://youtube.com/@MASTERMINDBODYGLOBAL" target="_blank" class="btn btn--primary event__btn">Visit Channel</a>
+                    </div>
+                    
+                    <div class="event__card">
+                        <div class="event__icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3 class="event__title">Instagram Live Sessions</h3>
+                        <p class="event__description">Follow us for daily inspiration and live Q&A sessions</p>
+                        <p class="event__date">Weekly live sessions</p>
+                        <a href="https://instagram.com/mastermind_body_global" target="_blank" class="btn btn--primary event__btn">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Get In Touch</h2>
+                <p class="section__subtitle">Ready to start your transformation? Contact us today!</p>
+            </div>
+            
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact__details">
+                            <h3>Phone Numbers</h3>
+                            <p><a href="tel:+919811218842">+91 9811218842</a></p>
+                            <p><a href="tel:+919818570805">+91 9818570805</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact__details">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/919811218842" target="_blank" class="btn btn--whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="contact__details">
+                            <h3>Follow Us</h3>
+                            <div class="social__links">
+                                <a href="https://instagram.com/mastermind_body_global" target="_blank" class="social__link" title="MasterMind Body Global Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://instagram.com/drdeeptivermaofficial" target="_blank" class="social__link" title="Dr. Deepti Verma Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://instagram.com/shalini1609.chopra" target="_blank" class="social__link" title="Shalini Chopra Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://youtube.com/@MASTERMINDBODYGLOBAL" target="_blank" class="social__link" title="YouTube Channel">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact__map">
+                    <div class="map__placeholder">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Location Map</p>
+                        <small>Connect with us virtually from anywhere</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="logo">
+                        <i class="fas fa-tree"></i>
+                        <span>MasterMind Body Global</span>
+                    </div>
+                    <p class="footer__tagline">Transform Your Mind · Body · Life</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Life Transformation</li>
+                            <li>Nutrition Counseling</li>
+                            <li>Mind Coaching</li>
+                            <li>Corporate Training</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4>Connect With Us</h4>
+                        <div class="footer__social">
+                            <a href="https://instagram.com/mastermind_body_global" target="_blank" class="social__link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@MASTERMINDBODYGLOBAL" target="_blank" class="social__link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://wa.me/919811218842" target="_blank" class="social__link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 MasterMind Body Global. All rights reserved.</p>
+                <p>Empowering lives through transformation coaching.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Thank You!</h3>
+                <button class="modal__close" id="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal__body">
+                <i class="fas fa-check-circle success-icon"></i>
+                <p>Your consultation request has been submitted successfully. We'll get back to you within 24 hours!</p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn--primary" id="modal-close-footer-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
